@@ -1,0 +1,70 @@
+///////////////////////////////////////html/////////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name-Tag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input placeholder="Enter your name" type="text" id="name">
+        <button onclick="addName()">Add</button>
+    <div class="tags"></div>
+       <!-- <div class="tag">
+        HEY I'm Aizen;
+       </div>
+       <div class="tag">
+        HEY I'm Aizen;
+       </div> -->
+    
+    </div>
+
+</body>
+<script src="ini.js"></script>
+</html>
+///////////////////////////////////////////////////csss///////////////////////////////
+*{
+    margin: 0%;
+    padding: 0;
+
+}
+body{
+    background-color: antiquewhite;
+}
+.container{
+    width: 80%;
+    min-height:100vh;
+    background-color:grey ;
+    margin: auto;
+    background-color: rgb(red, green, blue);
+}
+.tag{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(173, 179, 179);
+    width: 50%;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+input{
+    padding: 10px;
+    border: 1px solid rgb(red, green, blue);
+    outline: none;
+    font: 100 1.4rem;
+}
+button{
+    padding: 5px;
+}
+//////////////////////////////////js//////////////////////
+const name=document.getElementById("name");
+const tagscontainer=document.querySelector(".tags");
+const addName=()=>{
+    const tag=document.createElement("div");
+    tag.setAttribute("class","tag");
+    tag.innerText = `Hey, I am ${name.value}`;
+
+     tagscontainer.append(tag);
+}
