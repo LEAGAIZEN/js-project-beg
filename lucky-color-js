@@ -1,0 +1,103 @@
+/////////htmlcode////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac-sign</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h1>YOUR LUCKY COLOR</h1>
+<body>
+    <select  id="Zodiac">
+        <option value="Zodiac-sign">Choose Zodiac</option>
+        <option value="aries">Aries</option>
+        <option value="taurus">Taurus</option>
+        <option value="gemini">Gemini</option>
+        <option value="cancer">Cancer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="scorpio">Scorpio</option>
+        <option value="sagittarius">Sagittarius</option>
+        <option value="capricorn">Capricorn</option>
+        <option value="aquarius">Aquarius</option>
+        <option value="pisces">Pisces</option>
+    </select>
+    <button onclick="changeBackground()">Get color</button>
+</body>
+<script src="ini.js"></script>
+</html>
+????????????????????????????CSSS???????????????????????
+*{
+    margin: 0%;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 30px;
+    background-color: blueviolet;
+    padding: 10px;
+
+}
+select,button{
+    outline: none;
+    margin: 30px 0;
+    padding: 10px;
+    background-color: aliceblue;
+}
+;;;'''''''''''''''''''''''''''''''''''''''js;';';';';';';';';';';';';';';';';';';';';';';';';';';';'
+const Zodiac=document.getElementById("Zodiac");
+const body=document.body;
+const changeBackground= ()=>{
+
+    console.log(Zodiac.value);
+    switch(Zodiac.value){
+        case "aries":
+         body.style.backgroundColor="grey";
+         break;
+         case "taurus":
+            body.style.backgroundColor="blue";
+            break;
+          
+                case "aries":
+                    body.style.backgroundColor = "blue"; // Default color for empty string
+                    break;
+                case "gemini":
+                    body.style.backgroundColor = "yellow";
+                    break;
+                case "cancer":
+                    body.style.backgroundColor = "silver";
+                    break;
+                case "leo":
+                    body.style.backgroundColor = "gold";
+                    break;
+                case "virgo":
+                    body.style.backgroundColor = "brown";
+                    break;
+                case "libra":
+                    body.style.backgroundColor = "pink";
+                    break;
+                case "scorpio":
+                    body.style.backgroundColor = "red";
+                    break;
+                case "sagittarius":
+                    body.style.backgroundColor = "purple";
+                    break;
+                case "capricorn":
+                    body.style.backgroundColor = "gray";
+                    break;
+                case "aquarius":
+                    body.style.backgroundColor = "blue";
+                    break;
+                case "pisces":
+                    body.style.backgroundColor = "teal";
+                    break;
+                default:
+                    console.error("Invalid zodiac name:", zodiacName); // Catch any unexpected names
+            
+            
+
+    }
+};
